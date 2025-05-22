@@ -12,8 +12,8 @@ export class AppComponent {
   title = 'gitAngular';
 
   constructor(){
-    console.log("Funciones de prueba");
-    console.warn("Advertencia");
-    console.log("Prueba de conflictos");
+    console.log("nuevas funciones");
+    console.warn("cuidado");
+    console.log(("prueba de conflictos"));
   }
 }
