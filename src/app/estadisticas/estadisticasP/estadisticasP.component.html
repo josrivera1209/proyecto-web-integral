@@ -5,18 +5,51 @@
   <!-- Más Vendidos -->
   <section class="mb-5">
     <h2 class="text-success mb-4"><i class="bi bi-arrow-up-circle-fill me-2"></i>Más Vendidos</h2>
-
+    <div class="row g-4">
+      @for (producto of productosMasVendidos; track producto.nombre) {
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">{{ producto.nombre }}</h5>
+              <p class="card-text">Vendidos: {{ producto.ventas }}</p>
+            </div>
+          </div>
+        </div>
+      }
+    </div>
   </section>
 
   <!-- Menos Vendidos -->
   <section class="mb-5">
     <h2 class="text-danger mb-4"><i class="bi bi-arrow-down-circle-fill me-2"></i>Menos Vendidos</h2>
-
+    <div class="row g-4">
+      @for (producto of productosMenosVendidos; track producto.nombre) {
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">{{ producto.nombre }}</h5>
+              <p class="card-text">Vendidos: {{ producto.ventas }}</p>
+            </div>
+          </div>
+        </div>
+      }
+    </div>
   </section>
 
   <!-- Recomendados -->
   <section>
     <h2 class="text-primary mb-4"><i class="bi bi-star-fill me-2"></i>Recomendados</h2>
-
+    <div class="row g-4">
+      @for (producto of productosRecomendados; track producto.nombre) {
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">{{ producto.nombre }}</h5>
+              <p class="card-text">Valoración: {{ producto.rating }}/5</p>
+            </div>
+          </div>
+        </div>
+      }
+    </div>
   </section>
 </div>
