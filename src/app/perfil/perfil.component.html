@@ -1,1 +1,34 @@
-<p>perfil works!</p>,
+<div class="max-w-4xl mx-auto p-6">
+  <div class="bg-white shadow-xl rounded-2xl overflow-hidden">
+    <div class="bg-blue-600 p-6 text-white">
+      <h2 class="text-3xl font-bold">Perfil de Usuario</h2>
+      <p class="text-sm">Información personal y detalles del usuario</p>
+    </div>
+
+    <div class="p-6 grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div>
+        <label class="font-semibold text-gray-700">Nombre completo</label>
+        <p class="text-gray-900">{{ perfil.nombre }}</p>
+      </div>
+      <div>
+        <label class="font-semibold text-gray-700">Correo electrónico</label>
+        <p class="text-gray-900">{{ perfil.email }}</p>S
+      </div>
+      <div>
+        <label class="font-semibold text-gray-700">Rol</label>
+        <p class="text-gray-900">{{ perfil.rol }}</p>
+      </div>
+      <div>
+        <label class="font-semibold text-gray-700">Fecha de registro</label>
+        <p class="text-gray-900">{{ perfil.fechaRegistro | date:'longDate' }}</p>
+      </div>
+    </div>
+
+    <div class="p-6 border-t border-gray-200 text-right">
+      <button class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition"
+              (click)="editarPerfil()">
+        Editar Perfil
+      </button>
+    </div>
+  </div>
+</div>
